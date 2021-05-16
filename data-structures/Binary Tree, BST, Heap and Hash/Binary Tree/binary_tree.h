@@ -1,19 +1,20 @@
 #ifndef BINARY_TREE_H_
 #define BINARY_TREE_H_
+
+#define VAL_T int
+
+typedef struct Entry {
+  std::string key;
+  VAL_T val;
+} Entry;
+
 typedef struct Node {
-	int data;
-	struct Node* left;
-	struct Node* right;
+  Entry *entry;
+  struct Node *left;
+  struct Node *right;
 } Node;
 
-Node* CreateNode(int data);
+void initEntry(Entry *, std::string, VAL_T);
+Node *makeNode();
 
-// Depth-first search of binary tree
-// ----------------------------------------------------------------------------
-void PreorderTraversal(Node* node);
-
-void InorderTraversal(Node* node);
-
-void PostorderTraversal(Node* node);
-// ----------------------------------------------------------------------------
 #endif  // BINARY_TREE_H_

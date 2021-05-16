@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <iostream>
+#include <cstdlib>
 
 #include "binary_tree.h"
 
@@ -32,6 +33,4 @@ int main() {
   printf("Post-order traversal: ");
   PostorderTraversal(root);
   putchar('\n');
-
-  getchar();
 }
